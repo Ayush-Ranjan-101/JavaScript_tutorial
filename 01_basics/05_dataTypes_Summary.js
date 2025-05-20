@@ -33,3 +33,27 @@ console.log(typeof(myObj))     //object. Also called function
 console.log(typeof(myFunction))  //function. Also called object function
 
 //Javascript is a dynamically typed language
+
+// Stack(Primitive), heap(Non-primitive)
+
+// Stack used value passed
+let myGameName = "Blaze"
+
+let anotherName = myGameName
+anotherName = 'Ace'
+
+console.log(myGameName)
+console.log(anotherName)
+
+// Heap used refernce passed
+let userOne = {
+    email: "user@google.com",
+    upi: 'user@ybl'
+}
+
+let userTwo = userOne
+
+userTwo.email = 'me@googl.com'
+
+console.log(userOne.email);
+console.log(userTwo.email);
