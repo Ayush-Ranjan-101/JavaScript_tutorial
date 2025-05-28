@@ -16,23 +16,23 @@ user.welcomeMessage()
 
 // function users(){
 //     let username = "Ayush"
-//     console.log(this.username);
+//     console.log(this.username);  // undefined
 // }
 
 // users()
 
 // const users = function () {
 //     let username = "Ayush"
-//     console.log(this.username);
+//     console.log(this.username);  // undefined
 // }
 
 const users =  () => {
     let username = "Ayush"
-    console.log(this);
+    console.log(this);   // {}
 }
 
 
-// users()
+users()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2  // Explicit return
