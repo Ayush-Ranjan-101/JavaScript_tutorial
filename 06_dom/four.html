@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addToList(language){
+        const li = document.createElement('li')
+
+        // const text = document.createTextNode(language)
+        // li.appendChild(text)
+        // const list = document.querySelector('.language')
+        // list.appendChild(li)
+
+        // or 
+
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.languages').appendChild(li)
+        
+    }
+    addToList('TypeScript')
+    addToList('Java')
+
+    // Edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    console.log(secondLang)
+    // secondLang.innerHTML = 'Mojo'
+
+    // creating a new element and inserting it(Edit)
+    const newLi = document.createElement('li')
+    newLi.textContent = 'Python'
+    secondLang.replaceWith(newLi)
+    console.log(document.querySelector('li:nth-child(2)'))
+
+    // edit with outerHTML
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Golang</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
